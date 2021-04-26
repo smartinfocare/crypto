@@ -5,11 +5,11 @@ export default function Contact() {
           <div className="col-md-12">
   <div className="card-body ">
   <div className="row">
-<div className="col-md-9">
+<div className="col-md-10">
     <h6 className="my-heading">Quick Transfer</h6>
     <p className="my-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
     </div>
-<div className="col-md-3">
+<div className="col-md-2">
 <div className="form-row align-items-center">
     <div className="col-auto my-1">
       <label className="mr-sm-2 sr-only" htmlFor="inlineFormCustomSelect">Preference</label>
@@ -37,8 +37,8 @@ export default function Contact() {
 <div className="col-md-9">
     <h6 className="my-heading">Recent Contacts</h6>
     </div>
-<div className="col-md-3">
-<a href="#">viewmore</a>
+<div className="col-md-3 ">
+<a href="#" className="my-view">viewmore</a>
     </div>
       </div>
 

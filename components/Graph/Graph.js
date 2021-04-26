@@ -24,6 +24,7 @@ const lineData = {
       ],
     },
   };
+  
 const data = {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [
@@ -54,11 +55,11 @@ export default function Graph() {
       <div className="mt-5">
       <div className="row ">
       <div className="col-md-6">
-      <div className="card-body">
+      <div className="card-body my">
       
     <Line data={lineData} options={options} /></div>
 </div>
-      <div className="col-md-6">
+      <div className="col-md-6 my-card-margin">
   <div className="card-body"> <Line data={lineData} options={options} /></div>
  </div>
 </div>

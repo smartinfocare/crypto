@@ -9,10 +9,10 @@ export default function Tile() {
     <p>80000</p>
     <div className="row">
 
-    <div className="col-md-12"> 
-        <div className="row">
+    <div className="col-md-12 my-card-margin"> 
+        <div className="row ">
         <div className="col-md-4"> 
-  <h6 class="card-text my-heading">Valid to</h6>
+  <h6 className="card-text my-heading">Valid to</h6>
     </div>
     <div className="col-md-6"> 
     <h6 className="card-text my-heading">CardHolder</h6>
@@ -34,7 +34,8 @@ export default function Tile() {
     <p>80000</p>
     <div className="row">
 
-    <div className="col-md-12"> 
+    <div className="col-md-12 my-card-margin"> 
+    
         <div className="row">
         <div className="col-md-4"> 
     <h6 className="card-text my-heading">Valid to</h6>
@@ -61,10 +62,10 @@ export default function Tile() {
     <p>80000</p>
     <div className="row">
 
-    <div className="col-md-12"> 
+    <div className="col-md-12 my-card-margin"> 
         <div className="row">
         <div className="col-md-4"> 
-  <h6 class="card-text my-heading">Valid to</h6>
+  <h6 className="card-text my-heading">Valid to</h6>
     </div>
     <div className="col-md-6"> 
     <h6 className="card-text my-heading">CardHolder</h6>
@@ -87,7 +88,7 @@ export default function Tile() {
     <p>80000</p>
     <div className="row">
 
-    <div className="col-md-12">     
+    <div className="col-md-12 my-card-margin">     
         <div className="row">
         <div className="col-md-4"> 
     <h6 className="card-text my-heading">Valid to</h6>
