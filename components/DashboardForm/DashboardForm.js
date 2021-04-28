@@ -9,7 +9,7 @@ export default function DashboardForm() {
     <h6 className="my-heading">Quick trade</h6>
     <p className="my-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
     </div>
-<div className="col-md-2">
+<div className="col-md-2"> 
 <div className="form-row align-items-center">
     <div className="col-auto my-1">
       <label className="mr-sm-2 sr-only" htmlFor="inlineFormCustomSelect">Preference</label>
@@ -27,7 +27,7 @@ export default function DashboardForm() {
   <div className="form-group">
       <div className="input-group mb-2">
         <div className="input-group-prepend">
-          <div className="input-group-text ">Account BTC</div>
+          <div className="input-group-text">Account BTC</div>
         </div>
         <input type="text" className="form-control" id="inlineFormInputGroup"  />
       </div>
@@ -37,7 +37,7 @@ export default function DashboardForm() {
         <div className="input-group-prepend">
           <div className="input-group-text">Price BPL</div>
         </div>
-        <input type="text" className="form-control" id="inlineFormInputGroup"  />
+        <input type="text" className="form-control" id="inlineFormInputGroup"/>
       </div>
       </div>
       <div className="form-group">
@@ -45,7 +45,7 @@ export default function DashboardForm() {
         <div className="input-group-prepend">
           <div className="input-group-text">Fee (1%)</div>
         </div>
-        <input type="text" className="form-control" id="inlineFormInputGroup"  />
+        <input type="text" className="form-control" id="inlineFormInputGroup"/>
       </div>
       </div>
       <div className="form-group">

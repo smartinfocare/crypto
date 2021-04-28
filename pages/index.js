@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Dashboard from './dashboard/dashboard'
 
-export default function Home() {
+var axios = require('axios');
+
+export default function Home(props) {
+  console.log(props.data)
   return (
     <div>
       <Head>
@@ -12,12 +15,36 @@ export default function Home() {
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossOrigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
         <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-        {/* highchart  */}
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<script src="https://cdn.jsdelivr.net/npm/react-apexcharts"></script>
-
       </Head>
-<Dashboard />
+<script src="/__/firebase/8.4.2/firebase-app.js"></script>
+
+<script src="/__/firebase/8.4.2/firebase-analytics.js"></script>
+
+<script src="/__/firebase/init.js"></script>
+<Dashboard data={props.data}/>
     </div>
   )
 }
+
+export const getServerSideProps = async () => {
+  
+    const res = await fetch('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+      method: 'get',
+      headers: { 
+        'X-CMC_PRO_API_KEY': '9737c94c-9839-4ab2-b161-616cefa64abf', 
+        'Accept': 'application/json',
+        'Access-Control-Allow-Origin': 'http://localhost:3000',
+        "Access-Control-Allow-Headers": "x-requested-with, x-requested-by" 
+      }
+    })
+    const data = await res.json()
+
+    
+    //const data = await axios(config)
+    
+    return {
+      props:{
+        data
+      }
+    }
+  }

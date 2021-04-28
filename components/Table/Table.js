@@ -1,4 +1,5 @@
-
+var axios = require('axios');
+import {useEffect} from 'react';
 export default function Table() {
   const data =[{
     id:1,
@@ -41,6 +42,24 @@ export default function Table() {
     amount:"52000",
     total:"$53500"
 },]
+useEffect(() => {
+ fetData();
+}, [])
+const fetData = async () => {
+const res = await fetch('https://cors-anywhere.herokuapp.com/https://apiv2.bitcoinaverage.com/constants/exchangerates/global', {
+  method: 'get',
+  headers: { 
+    'x-ba-key': 'MGQ3ODg5MWJhN2NjNGU1ZTkzMDQzZDM0YWQ2MzgwZTM', 
+    'Accept': 'application/json',
+    'Access-Control-Allow-Origin': 'http://localhost:3000',
+    "Access-Control-Allow-Headers": "x-requested-with, x-requested-by" 
+}
+})
+
+const coountryData = await res.json()
+
+}
+
     return (
       <div className="mt-5">
       <div className="row text-white">

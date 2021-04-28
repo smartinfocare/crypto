@@ -7,10 +7,10 @@ import DashboardForm from '../../components/DashboardForm/DashboardForm'
 import TradingActivityTable from '../../components/TradingActivityTable/TradingActivityTable'
 import Contact from '../../components/Contact/Contact'
 import Footer from '../../components/Footer/Footer'
-import SidebarView from '../../components/Sidebar/Sidebar'
-export default function Dashoard() {
+import Information from '../../components/information/information'
+
+export default function Dashboard(props) {
   return (
-    
    < div className="allBody">
    <Header />   
    <div className="container text-white">
@@ -19,16 +19,13 @@ export default function Dashoard() {
 <h1 className="h1 dash_heading">Dashboard</h1>
      </div>
      <div className="col-md-2">
-
   <a className="btn btn-secondary form-control my-dash-drop  dropdown-toggle" href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   <i className="fa fa-cloud" aria-hidden="true"></i> Medan-IND
   </a>
-
   <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a className="dropdown-item" href="#">Action</a>
     <a className="dropdown-item" href="#">Another action</a>
     <a className="dropdown-item" href="#">Something else here</a>
-
   </div>
      </div>
      <div className="col-md-2">
@@ -41,7 +38,8 @@ export default function Dashoard() {
    <Table />
    <DashboardForm />
    <Tile/>
-   <TradingActivityTable/>
+   <Information myData={props.data}/>
+   <TradingActivityTable />
    <Contact/>
    </div>
    <Footer/>
